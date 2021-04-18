@@ -6,7 +6,7 @@ const bot = new TelegramBot(token, {
 
 });
 var Idmichat = 923905754;
-
+///ES EL URL DEL TOKEN, EL SOLO SE GENERA DEPUES DE CREAR EL TOKEN/
 var client  = mqtt.connect('mqtt://cerdos-prueba:pEcontDiDMEvV6rT@cerdos-prueba.cloud.shiftr.io');
 
 bot.on('message', (msg) => {
