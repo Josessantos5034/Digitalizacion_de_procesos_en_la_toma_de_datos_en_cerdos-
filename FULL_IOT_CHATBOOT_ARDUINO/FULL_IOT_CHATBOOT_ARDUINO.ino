@@ -12,8 +12,8 @@ ESP8266WiFiMulti wifiMulti;
 
 const char ssid[] = "RED-111";
 const char pass[] = "74241767ab";
-const char ssid2[] = "";
-const char pass2[] = "";
+const char ssid2[] = "TPS";
+const char pass2[] = "3DLAB2019";
 WiFiClient net;
 MQTTClient client;
 int led = 2;
@@ -31,7 +31,7 @@ void connect() {
 
   Serial.print("\nConectando con MQTT...");
   //LA DISTRIBUCION DE DATOS ES DE REPOSITORIO,INSTANCES Y CODIGO DEL TOKEN //
-  while (!client.connect("Proyectos_IOT", "josesantos5034", "0OQ0zjmiW7oAs3gq")) {
+  while (!client.connect("prueba_datos", "cerdos-prueba", "pEcontDiDMEvV6rT")) {
     digitalWrite(led, 0);
     delay(1000);
     digitalWrite(led, 1);
@@ -41,7 +41,7 @@ void connect() {
 
   Serial.println("\nConectado MQTT!");
 
-  client.subscribe("/Proyecto/data");
+  client.subscribe("temp");
 }
 
 void MensajeRecibido (String &topic, String &payload) {
@@ -67,9 +67,9 @@ void setup() {
 WiFi.mode(WIFI_STA);
   delay(100);
   wifiMulti.addAP("RED-111", "74241767ab");
-  wifiMulti.addAP(ssid2, pass2);
+  wifiMulti.addAP("TPS", "3DLAB2019");
 
-  client.begin("josesantos5034.cloud.shiftr.io", net);
+  client.begin("cerdos-prueba.cloud.shiftr.io", net);
   client.onMessage(MensajeRecibido);
 
   connect();
@@ -81,8 +81,6 @@ void loop() {
 
   if (!client.connected()) {
     connect();
-  }
-  if (millis() - lastMillis > 1000) {
-    lastMillis = millis();
+
   }
 }
