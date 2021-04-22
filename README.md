@@ -1,6 +1,7 @@
-# Digitalizacion de toma de datos en cria de cerdos
+** # Digitalizacion de toma de datos en cria de cerdos **
 
-INTRODUCCION
+**INTRODUCCION**
+
 La porcicultura es un gran rubro que se encuentra presente en todos los lugares de mundo, ya que a partir ello los mercados locales e internacionales puede ser surtidos. En algunos casos este sector es descuidado o no cuenta con las herramientas tecnológicas necesarias para poder trabajar y optimizar procesos importantes durante el periodo de cría de estos animales.
 En la presente investigación se recopila toda la información del proyecto “Digitalización en los procesos de toma de datos para la crianza de cerdos de granja”. En el cual se hace uso de diversas áreas, de tal manera poder desarrollar un proceso de recolección de datos y su almacenamiento en formato digital.
 Dentro de la investigación se tiene diferentes temas como; microcontroladores, celdas de carga, módulos de cámara, drivers y entre muchos más que serán mencionado en el desarrollo del trabajo, para dar un conocimiento básico, así como entendible para usuarios finales y personas capacitadas en el área.
