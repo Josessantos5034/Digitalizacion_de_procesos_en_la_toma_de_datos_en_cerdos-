@@ -34,7 +34,9 @@ ALCANCES DEL PROYECTO:
 COMPOTENTES PARA ELABORAR EL PROTOTIPO:
 
 - Celda de carga de 500kg
+
 ![Celda](/imagenes/CELDA%20DE%20CARGA.jpg)
+
 - Amplificador HX711
 - ESP32 wifi
 - Modulo de camara ESP32
