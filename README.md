@@ -1,4 +1,5 @@
-**Digitalizacion de toma de datos en cria de cerdos**
+**Digitalizacion de toma de datos en la cria de cerdos**
+
 ***
 **INTRODUCCION**
 
