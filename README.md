@@ -38,9 +38,23 @@ COMPOTENTES PARA ELABORAR EL PROTOTIPO:
 ![Celda](/imagenes/CELDA%20DE%20CARGA.jpg)
 
 - Amplificador HX711
+
+![Amplificador](/imagenes/HX711-PINES-min.jpg)
+
 - ESP32 wifi
+
+![ESP32](/imagenes/CELDA%20DE%20CARGA.jpg)
+
 - Modulo de camara ESP32
-- Sensor de temperatura AMG883
+
+![Camara esp32](/imagenes/esp%20camara-min.jpg)
+
+- Sensor de temperatura MLX90614
+![temperatura](/imagenes/sensor-de-temperatura-mlx90614.jpg)
+
+- LCD 16x2 I2C
+![LCD](/imagenes/lcd%2016x2-min.jpg)
+
 ***
 LENGUAJES DE PROGRAMACION Y PLATAFORMAS UTILIZADAS:
 
