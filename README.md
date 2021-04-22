@@ -44,9 +44,11 @@ COMPOTENTES PARA ELABORAR EL PROTOTIPO:
 ![Camara esp32](/imagenes/esp%20camara-min.jpg)
 
 - Sensor de temperatura MLX90614
+
 ![temperatura](/imagenes/sensor-de-temperatura-mlx90614.jpg)
 
 - LCD 16x2 I2C
+
 ![LCD](/imagenes/lcd%2016x2-min.jpg)
 
 ***
