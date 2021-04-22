@@ -22,7 +22,7 @@ Objetivos específicos
 •	Emplear herramientas tecnológicas para facilitar algunos procesos dentro de la crianza de cerdos.
 
 •	Diseñar un manual para los usuarios, este funcionara de guía para usar correctamente el proyecto.
-
+***
 ALCANCES DEL PROYECTO:
 
 1. Realizar la documentación respectiva del proyecto de todo lo relacionado al proyecto.
@@ -30,7 +30,7 @@ ALCANCES DEL PROYECTO:
 2. Entregar un manual con los pasos necesario para la manipulación del proyecto final.
 
 3. Diseñar una propuesta para la digitalización en los procesos de toma de datos para la crianza de cerdos en granjas.
-
+***
 COMPOTENTES PARA ELABORAR EL PROTOTIPO:
 
 - Celda de carga de 500kg
@@ -38,7 +38,7 @@ COMPOTENTES PARA ELABORAR EL PROTOTIPO:
 - ESP32 wifi
 - Modulo de camara ESP32
 - Sensor de temperatura AMG883
-
+***
 LENGUAJES DE PROGRAMACION Y PLATAFORMAS UTILIZADAS:
 
 - ARDUINO
