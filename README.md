@@ -33,15 +33,15 @@ ALCANCES DEL PROYECTO:
 
 COMPOTENTES PARA ELABORAR EL PROTOTIPO:
 
-·Celda de carga de 500kg
-·Amplificador HX711
-·ESP32 wifi
-·Modulo de camara ESP32
-·Sensor de temperatura AMG883
+*·Celda de carga de 500kg
+*·Amplificador HX711
+*·ESP32 wifi
+*·Modulo de camara ESP32
+*·Sensor de temperatura AMG883
 
 LENGUAJES DE PROGRAMACION Y PLATAFORMAS UTILIZADAS:
 
 ARDUINO
-JAVASCRIPT
-NODE JS
-BOOT TELEGRAM
+*JAVASCRIPT
+*NODE JS
+*BOOT TELEGRAM
