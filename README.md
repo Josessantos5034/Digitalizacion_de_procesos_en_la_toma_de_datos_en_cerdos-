@@ -8,7 +8,7 @@ El principal motivo de esta investigación es la digitalización de una parte de
 
 
 OBJETIVOS PLANTEADOS:
-Objetivo general:
+Objetivo general
 •	Diseñar una propuesta para la digitalización en los procesos de toma de datos para la crianza de cerdos en granjas.
 
 Objetivos específicos
