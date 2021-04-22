@@ -27,18 +27,34 @@ ALCANCES DEL PROYECTO:
 
 COMPOTENTES PARA ELABORAR EL PROTOTIPO:
 
-·Celda de carga de 500kg
-·Amplificador HX711
-· ESP32 wifi
-·Modulo de camara ESP32
-·Sensor de temperatura AMG883
+- Celda de carga de 500kg
 
+![Celda](/imagenes/CELDA%20DE%20CARGA.jpg)
+
+- Amplificador HX711
+
+![Amplificador](/imagenes/HX711-PINES-min.jpg)
+
+- ESP32 wifi
+
+![ESP32](/imagenes/esp32-min.jpg)
+
+- Modulo de camara ESP32
+
+![Camara esp32](/imagenes/esp%20camara-min.jpg)
+
+- Sensor de temperatura MLX90614
+![temperatura](/imagenes/sensor-de-temperatura-mlx90614.jpg)
+
+- LCD 16x2 I2C
+![LCD](/imagenes/lcd%2016x2-min.jpg)
+
+***
 LENGUAJES DE PROGRAMACION Y PLATAFORMAS UTILIZADAS:
 
-ARDUINO
-JAVASCRIPT
-NODE JS
-BOOT TELEGRAM
-
-DESCRIPCION GENERAL DE LO QUE SE PLANEA HACER:
-Se planea construir una bascula digital en la que se pueda pesar, tomar temperatura, registrar y capturar imagen a los cerdos y que estos datos esten presente en un chatboot de telegram, ya que puede ser una plataforma facil de manipular para las personas que usaran el prototipo final y lo usaran en su dia a dia.
+- ARDUINO
+- JAVASCRIPT
+- NODE JS
+- BOOT TELEGRAM
+***
+### DISEÑO DE LA ESTRUCTURA DE LA BASCULA DIGITAL:
