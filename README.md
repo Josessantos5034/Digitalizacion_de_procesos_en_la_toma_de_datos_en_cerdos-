@@ -43,7 +43,7 @@ COMPOTENTES PARA ELABORAR EL PROTOTIPO:
 
 - ESP32 wifi
 
-![ESP32](/imagenes/CELDA%20DE%20CARGA.jpg)
+![ESP32](/imagenes/esp32-min.jpg)
 
 - Modulo de camara ESP32
 
