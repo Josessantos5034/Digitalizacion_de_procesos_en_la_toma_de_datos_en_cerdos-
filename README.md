@@ -25,11 +25,11 @@ Objetivos específicos
 
 ALCANCES DEL PROYECTO:
 
-1.	Registrar el proceso de investigación y desarrollo de la digitalización en los procesos de toma de datos para la crianza de cerdos en granjas.
+1.Realizar la documentación respectiva del proyecto de todo lo relacionado al proyecto.
 
-2.	Diseñar un manual para los usuarios, este funcionara de guía para usar correctamente el proyecto.
+2.Entregar un manual con los pasos necesario para la manipulación del proyecto final.
 
-3.	Emplear herramientas tecnológicas para facilitar algunos procesos dentro de la crianza de cerdos.
+3.Diseñar una propuesta para la digitalización en los procesos de toma de datos para la crianza de cerdos en granjas.
 
 COMPOTENTES PARA ELABORAR EL PROTOTIPO:
 
