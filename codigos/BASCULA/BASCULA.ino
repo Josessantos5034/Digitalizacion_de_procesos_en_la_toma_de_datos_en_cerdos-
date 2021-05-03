@@ -1,10 +1,8 @@
-
 #include <Q2HX711.h>
 //LCD config
 #include <Wire.h>
 LiquidCrystal_I2C lcd(0x27,20,4);
 #include <LiquidCrystal_I2C.h>
-
 
 //Pins
 const byte hx711_data_pin = 3;    //Data pin from HX711
@@ -15,7 +13,7 @@ Q2HX711 hx711(hx711_data_pin, hx711_clock_pin); // prep hx711
 
 //Variables
 /////////Change here with your calibrated mass////////////
-float y1 = 292875; // calibrated mass to be added
+float y1 = 292875; //  LA MASA DEL OBJETO TUYO EN GRAMOS USADO PARA CALIBRAR
 //////////////////////////////////////////////////////////
 
 long x1 = 0L;
@@ -25,10 +23,9 @@ float tara = 0;
 bool tara_pushed = false;
 bool mode_pushed = false;
 int mode = 0;
-float oz_conversion = 0.035274;
+float kg_conversion = 0.001;
+float lb_conversion = 0.00220462;
 //////////////////////////////////////////////////////////
-
-
 
 void setup() {
   Serial.begin(9600);                 // prepare serial port
@@ -91,8 +88,6 @@ void loop() {
   }
   reading/=long(avg_size);
 
-
-
   // calculating mass based on calibration and linear fit
   float ratio_1 = (float) (reading-x0);
   float ratio_2 = (float) (x1-x0);
@@ -135,40 +130,27 @@ void loop() {
 
   if(mode == 0)
   {
-    Serial.print(mass - tara);
-    Serial.println(" g");
-    lcd.clear();
-    lcd.setCursor(0,0);
-    lcd.print("     SCALE!     ");
-    lcd.setCursor(0,1);
-    lcd.print(mass - tara);
-    lcd.print(" g");
-  }
-  else if(mode == 1)
-  {
-    Serial.print(mass - tara);
+    Serial.print((mass - tara)*kg_conversion);
     Serial.println(" kg");
     lcd.clear();
     lcd.setCursor(0,0);
     lcd.print("     SCALE!     ");
     lcd.setCursor(0,1);
     lcd.print(mass - tara);
-    lcd.print(" kg");
+    lcd.print((" kg")*kg_conversion);
   }
-  else
+  else if(mode == 1)
   {
-    Serial.print((mass - tara)*oz_conversion);
-    Serial.println(" lb");
+    Serial.print(mass - tara);
+    Serial.println((" lb")*lb_conversion);
     lcd.clear();
     lcd.setCursor(0,0);
     lcd.print("     SCALE!     ");
     lcd.setCursor(0,1);
-    lcd.print((mass - tara)*oz_conversion);
-    lcd.print(" lb");
+    lcd.print(mass - tara)*lb_conversion);
+    lcd.print(("lb");
   }
-
 }//End of void loop
-
 
 //interruption to detect buttons
 ISR(PCINT0_vect)
