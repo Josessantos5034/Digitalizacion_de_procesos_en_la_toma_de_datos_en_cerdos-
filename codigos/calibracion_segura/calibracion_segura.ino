@@ -1,60 +1,56 @@
-#include "HX711.h"
-
-#include <Wire.h>      // libreria de comunicacion por I2C
-#include <LCD_I2C.h>
-//#include <LiquidCrystal_I2C.h>  // libreria para LCD por I2C
-
-#define LOADCELL_DOUT_PIN  3
-#define LOADCELL_SCK_PIN  2
-
+#include "HX711.h"  libreria de amplificador ADC
+#define LOADCELL_DOUT_PIN  22
+#define LOADCELL_SCK_PIN  23
+ 
 HX711 scale;
-//LiquidCrystal_I2C lcd(0x20,16,2);
-LCD_I2C lcd(0x27); // Default address of most PCF8574 modules, change according
-
-float calibration_factor = -4034.09091; //-7050 worked for my 440lb max scale setup
-
+ 
+//Change this calibration factor as per your load cell once it is found you many need to vary it in thousands
+float calibration_factor = 4034.09091; //-106600 worked for my 40Kg max scale setup 
 void setup() {
-
-  lcd.backlight();
-  //lcd.begin(16, 2);
-  lcd.clear();
   Serial.begin(9600);
-  Serial.println("HX711 calibration sketch");
+  Serial.println("HX711 Calibration");
   Serial.println("Remove all weight from scale");
   Serial.println("After readings begin, place known weight on scale");
-  Serial.println("Press + or a to increase calibration factor");
-  Serial.println("Press - or z to decrease calibration factor");
-
+  Serial.println("Press a,s,d,f to increase calibration factor by 10,100,1000,10000 respectively");
+  Serial.println("Press z,x,c,v to decrease calibration factor by 10,100,1000,10000 respectively");
+  Serial.println("Press t for tare");
   scale.begin(LOADCELL_DOUT_PIN, LOADCELL_SCK_PIN);
   scale.set_scale();
   scale.tare(); //Reset the scale to 0
-
+ 
   long zero_factor = scale.read_average(); //Get a baseline reading
   Serial.print("Zero factor: "); //This can be used to remove the need to tare the scale. Useful in permanent scale projects.
   Serial.println(zero_factor);
 }
-
 void loop() {
-
+ 
   scale.set_scale(calibration_factor); //Adjust to this calibration factor
+ 
   Serial.print("Reading: ");
-  //lcd.print ("Reading: ");
-  lcd.print ("Reading: ");
-  lcd.setCursor(11, 0);
-  lcd.print(scale.get_units(), 1);
   Serial.print(scale.get_units(), 1);
-  delay(500);
-  //lcd.setCursor(0, 0);
-  //lcd.print(scale.get_units(), 1);
-  Serial.print(" lbs"); //Change this to kg and re-adjust the calibration factor if you follow SI units like a sane person
+  Serial.print(" lb"); //Change this to kg and re-adjust the calibration factor if you follow SI units like a sane person
   Serial.println();
-
-  if (Serial.available())
+ 
+  if(Serial.available())
   {
     char temp = Serial.read();
-    if (temp == '+' || temp == 'a')
+    if(temp == '+' || temp == 'a')
       calibration_factor += 10;
-    else if (temp == '-' || temp == 'z')
+    else if(temp == '-' || temp == 'z')
       calibration_factor -= 10;
+    else if(temp == 's')
+      calibration_factor += 100;  
+    else if(temp == 'x')
+      calibration_factor -= 100;  
+    else if(temp == 'd')
+      calibration_factor += 1000;  
+    else if(temp == 'c')
+      calibration_factor -= 1000;
+    else if(temp == 'f')
+      calibration_factor += 10000;  
+    else if(temp == 'v')
+      calibration_factor -= 10000;  
+    else if(temp == 't')
+      scale.tare();  //Reset the scale to zero
   }
 }
